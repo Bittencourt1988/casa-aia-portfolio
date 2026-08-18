@@ -193,31 +193,60 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(38px,4.6vw,62px);line-he
 .site-header{min-height:68px;padding-left:4vw;padding-right:4vw;grid-template-columns:1fr auto}
 .brand img{width:66px}.menu-toggle{grid-column:2}.header-cta{display:none}.nav{top:68px}
 .hero{min-height:620px;height:calc(100svh - 68px)}
-.hero-image{object-position:58% center}
+.hero-image{object-position:50% 58%}
 .hero-copy{
-  bottom:28px;
-  width:88%;
-  grid-template-columns:1fr 1fr;
-  row-gap:18px;
-  column-gap:12px;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom: 75px;
+
+  width:100%;
+  max-width:none;
+  padding:0 24px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+  transform:none;
 }
+
 .hero h1{
-  grid-column:1/-1;
-  grid-row:1;
-  max-width:100%;
-  font-size:clamp(25px,7.8vw,36px);
-  line-height:1.18;
-  letter-spacing:.08em;
+  width:100%;
+  max-width:460px;
+
+  margin:0 auto 24px;
+
+  font-size:clamp(25px,7vw,32px);
+  line-height:1.22;
+  letter-spacing:.05em;
+
+  text-align:center;
+  white-space:normal;
 }
-.hero-actions .btn:first-child{
-  grid-column:1;
-  grid-row:2;
-  justify-self:start;
+
+.hero-actions{
+  width:100%;
+
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:18px;
 }
+
+.hero-actions .btn{
+  width:145px;
+  min-width:0;
+  padding:11px 10px;
+}
+
+.hero-actions .btn:first-child,
 .hero-actions .btn:last-child{
-  grid-column:2;
-  grid-row:2;
-  justify-self:end;
+  margin:0;
 }
 .hero-actions .btn{min-width:118px;padding:9px 16px;font-size:10px}
 .section{width:88%;padding:78px 0}
